@@ -11,61 +11,64 @@
         "Good day"
       ],
       "responses": [
-        "Hey :-)",
-        "Hello, thanks for visiting",
-        "Hi there, what can I do for you?",
-        "Hi there, how can I help?"
+        "Hello, I'm here to listen. What's on your mind today?",
+        "Hi there, feel free to share your thoughts with me.",
+        "Greetings! How can I assist you today?"
       ]
     },
     {
       "tag": "goodbye",
       "patterns": ["Bye", "See you later", "Goodbye"],
       "responses": [
-        "See you later, thanks for visiting",
-        "Have a nice day",
-        "Bye! Come back again soon."
+        "Take care, see you soon!",
+        "Goodbye! I'm here whenever you need to talk.",
+        "Farewell, and remember that I'm here to help."
       ]
     },
     {
-      "tag": "thanks",
-      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
-      "responses": ["Happy to help!", "Any time!", "My pleasure"]
-    },
-    {
-      "tag": "items",
+      "tag": "help",
       "patterns": [
-        "Which items do you have?",
-        "What kinds of items are there?",
-        "What do you sell?"
+        "Can you help me with my problem?",
+        "I need help with an issue."
       ],
       "responses": [
-        "We sell coffee and tea",
-        "We have coffee and tea"
+        "I'm here to help. Could you explain a bit more about what you're dealing with?",
+        "It sounds like you're facing a challenge. What do you think would be a good first step?"
       ]
     },
     {
-      "tag": "payments",
+      "tag": "unhappiness",
       "patterns": [
-        "Do you take credit cards?",
-        "Do you accept Mastercard?",
-        "Can I pay with Paypal?",
-        "Are you cash only?"
+        "I am unhappy with my relationship",
+        "My relationship makes me sad"
       ],
       "responses": [
-        "We accept VISA, Mastercard and Paypal",
-        "We accept most major credit cards, and Paypal"
+        "It sounds tough. What do you think makes you feel this way about your relationship?",
+        "That must be hard. What do you need from your relationship that you feel is lacking now?"
       ]
     },
     {
-      "tag": "delivery",
+      "tag": "career",
       "patterns": [
-        "How long does delivery take?",
-        "How long does shipping take?",
-        "When do I get my delivery?"
+        "Should I quit my job?",
+        "I hate my job",
+        "I'm thinking of resigning"
       ],
       "responses": [
-        "Delivery takes 2-4 days",
-        "Shipping takes 2-4 days"
+        "It's important to feel fulfilled by what you do. What aspects of your job are making you consider quitting?",
+        "Quitting is a big decision. What would your ideal work situation look like?"
+      ]
+    },
+    {
+      "tag": "exploration",
+      "patterns": [
+        "What should I do?",
+        "I don't know what to do",
+        "I'm feeling lost"
+      ],
+      "responses": [
+        "Let's try to find a way forward. What options have you considered so far?",
+        "Feeling lost can be tough. What's one thing that feels right or positive to you now?"
       ]
     },
     {
@@ -76,8 +79,8 @@
         "Do you know a joke?"
       ],
       "responses": [
-        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
-        "What did the buffalo say when his son left for college? Bison."
+        "Humor is a great way to lift our spirits. Why don't you tell me what makes you laugh?",
+        "I find that laughter can be very therapeutic. What's something funny that happened to you recently?"
       ]
     }
   ]
