@@ -12,7 +12,7 @@ def get_response(msg):
         # For each pattern in the intent's patterns
         for pattern in intent['patterns']:
             # Check if the pattern matches the message
-            if re.search(f".* {pattern} .*", msg, re.IGNORECASE):
+            if re.search(r"\b" + re.escape(pattern) + r"\b", msg, re.IGNORECASE):
                 # If a pattern matches, select a random response
                 return random.choice(intent['responses'])
     # Default response if no pattern matches
