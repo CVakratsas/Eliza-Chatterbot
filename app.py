@@ -80,16 +80,16 @@ class ChatApplication:
 
 
 if __name__ == "__main__":
-    print("Chatbot is running. Type something to begin...")
-    while True:
-        # Get user input
-        msg = input("You: ")
-        if msg.lower() in ['exit', 'quit']:
-            print("Chatbot: Goodbye!")
-            break
-        # Get response from the bot
-        response = get_response(msg)
-        print(f"Chatbot: {response}")
+    # print("Chatbot is running. Type something to begin...")
+    # while True:
+    #     # Get user input
+    #     msg = input("You: ")
+    #     if msg.lower() in ['exit', 'quit']:
+    #         print("Chatbot: Goodbye!")
+    #         break
+    #     # Get response from the bot
+    #     response = get_response(msg)
+    #     print(f"Chatbot: {response}")
 
-    # app = ChatApplication()
-    # app.run()
+    app = ChatApplication()
+    app.run()
