@@ -1,22 +1,25 @@
 from tkinter import *
 from chat import get_response
 
-BG_GRAY = "#ABB2B9"
-BG_COLOR = "#17202A"
-TEXT_COLOR = "#EAECEE"
+BG_GRAY = "#78909C"
+BG_COLOR = "#263238"
+TEXT_COLOR = "#B2EBF2"
 
 FONT = "Helvetica 14"
 FONT_BOLD = "Helvetica 13 bold"
 
 
 class ChatApplication:
+    # Initialize the ChatApplication object.
     def __init__(self):
         self.window = Tk()
         self._setup_main_window()
 
+    # Start the Tkinter event loop.
     def run(self):
         self.window.mainloop()
 
+    # Set up the main window of the application.
     def _setup_main_window(self):
         self.window.title("Eliza Chatterbot")
         self.window.resizable(width=False, height=False)
@@ -57,10 +60,18 @@ class ChatApplication:
                              command=lambda: self._on_enter_pressed(None))
         send_button.place(relx=0.77, rely=0.008, relheight=0.06, relwidth=0.22)
 
+        self.text_widget.configure(state=NORMAL)
+        self.text_widget.insert(END, "Hello. How are you feeling today?\n\n", "ELIZA")
+        self.text_widget.configure(state=DISABLED)
+
+    # Handle the event when the user presses the Enter key.
     def _on_enter_pressed(self, event):
         msg = self.msg_entry.get()
+        if msg.lower() == "quit":
+            self.window.quit()
         self._insert_message(msg, "You")
 
+    # Insert a message into the text widget.
     def _insert_message(self, msg, sender):
         if not msg:
             return
@@ -80,16 +91,5 @@ class ChatApplication:
 
 
 if __name__ == "__main__":
-    # print("Chatbot is running. Type something to begin...")
-    # while True:
-    #     # Get user input
-    #     msg = input("You: ")
-    #     if msg.lower() in ['exit', 'quit']:
-    #         print("Chatbot: Goodbye!")
-    #         break
-    #     # Get response from the bot
-    #     response = get_response(msg)
-    #     print(f"Chatbot: {response}")
-
     app = ChatApplication()
     app.run()
